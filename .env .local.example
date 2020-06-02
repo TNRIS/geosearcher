@@ -1,0 +1,2 @@
+REACT_APP_MAPBOX_KEY=<TNRIS mapbox public api key>
+REACT_APP_NOMINATIM_URL=<TNRIS nominatim url>
