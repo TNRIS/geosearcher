@@ -1,0 +1,67 @@
+body {
+    font-family: 'monospace'
+}
+
+/* Map styles */
+.mapContainer {
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+}
+
+.sidebarStyle {
+    display: inline-block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin: 12px;
+    background-color: #636262;
+    color: #ffffff;
+    z-index: 1 !important;
+    padding: 6px;
+}
+
+/* Downshift styles */
+input {
+    margin: 1rem 1rem 0rem 1rem;
+    width: 20rem;
+    padding: 1rem .5rem;
+    position: relative;
+    z-index: 1;
+}
+.downshift-dropdown {
+    /* margin: 0 auto; */
+    margin: 1rem 0rem 1rem 1rem;
+    width: 21rem;
+    /* border: 1px solid whitesmoke; */
+    border-bottom: none;
+    position: absolute;
+    z-index: 1;
+    padding-inline-start: 0px;
+}
+.dropdown-item {
+    padding: 0.5rem;
+    cursor: pointer;
+    border-bottom: 1px solid whitesmoke;
+    font-size: 1rem;
+    text-align: left;
+}
+.dropdown-button {
+    padding: 0.6rem;
+    border-radius: 3px;
+    background: white;
+    cursor: pointer;
+}
+.popper-div {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 5rem;
+}
+.popper-item {
+    padding: .5rem;
+    border-bottom: 1px solid whitesmoke;
+}
