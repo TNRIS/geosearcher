@@ -22,7 +22,7 @@ Prerequisites: [Docker Engine](https://docs.docker.com/engine/) &
 2. Enter http://localhost:3000/ in a browser to see the application running 
 
 ### NPM Scripts
-Prerequisite: node 12
+Prerequisite: node 12.6 & npm 6.9
 1. From the project directory, install app dependencies by running
    `npm install`
 2. Start up the application by running `npm run start`
