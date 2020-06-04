@@ -5,8 +5,6 @@ import './css/site.css';
 
 import Map from './Map';
 
-mapboxgl.accessToken = 'pk.eyJ1IjoidG5yaXMtZmxvb2QiLCJhIjoiY2pua25lYTJrMWM1ODNwb3N3Y2c0aGZ5YSJ9.qfk_KrxbrQrLhPS5ZSakLQ';
-
 class App extends React.Component {
 
     render() {
