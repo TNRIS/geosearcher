@@ -12,5 +12,8 @@ services:
     ports:
       - 3000:3000
     volumes:
-      - .:/home/node/app
-      - /home/node/app/node_modules
+      - .:/home/app
+      - node_modules:/home/app/node_modules
+
+volumes:
+  node_modules:

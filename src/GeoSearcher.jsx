@@ -1,6 +1,5 @@
 import React from 'react';
 import Downshift from 'downshift';
-import axios from 'axios';
 
 export default class GeoSearcher extends React.Component {
     constructor(props) {
@@ -23,9 +22,9 @@ export default class GeoSearcher extends React.Component {
         const geocodeUrl = `${process.env.REACT_APP_NOMINATIM_URL}/search/\
             ${feature}?format=geojson&polygon_geojson=1`;
         // ajax request to retrieve the features
-        axios.get(geocodeUrl).then(response => {
-            this.setState({ features: response.data.features })
-        })  
+        fetch(geocodeUrl)
+            .then(response => response.json())
+            .then(json => this.setState({ features: json.features })) 
     }
 
     render() {
@@ -54,7 +53,7 @@ export default class GeoSearcher extends React.Component {
                         <input
                         className='downshift-input'
                         {...getInputProps({
-                            placeholder: "Search Texas",
+                            placeholder: "Search for Places in Texas",
                             onChange: this.inputOnChange,
                             value: this.state.inputValue
                         })}

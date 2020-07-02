@@ -1,25 +1,19 @@
 # pull official base image
 FROM node:12-alpine
 
-# create the app directories
-RUN mkdir -p /home/node/app/node_modules && chown -R node:node /home/node/app
-
 # set working directory
-WORKDIR /home/node/app
+WORKDIR /home/app
 
+# Install app dependencies
+# A wildcard is used to ensure both package.json AND package-lock.json are copied
+# where available (npm@5+)
 COPY package*.json ./
-
-# switch to the non-root user node
-USER node
 
 # install app dependencies
 RUN npm install
 
-# add `/app/node_modules/.bin` to $PATH
-# ENV PATH /app/node_modules/.bin:$PATH
-
 # add app
-COPY --chown=node . .
+COPY . .
 
 EXPOSE 3000
 
